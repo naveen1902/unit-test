@@ -14,5 +14,5 @@ jobs:
         uses: naveen1902/unit-test-upload-action@v1
         with:
           dashboard_url: ${{ http://100.20.0.129:3000 }}
-          api_key: ${{ secrets.API_KEY }}
+          api_key: ${{ eyJrIjoidlZ4ajhvQlRLZWVHNFVZelp0TTVIakxVeVVOTmt4M1QiLCJuIjoibmV3a2V5IiwiaWQiOjF9 }}
           file_path: 'unit-tests/build/report.xml'
