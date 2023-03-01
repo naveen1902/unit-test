@@ -78,6 +78,12 @@ jobs:
          with:
            name: Test-results
            path: 'unit-tests/build/report.xml'
-         
+           
+       - name: Upload reports to Grafana
+      uses: taylorgoolsby/grafana-reporter-action@v1
+      with:
+        grafana_url: ${{ secrets.http://100.20.0.129:3000 }}
+        api_key: ${{ secrets.eyJrIjoidlZ4ajhvQlRLZWVHNFVZelp0TTVIakxVeVVOTmt4M1QiLCJuIjoibmV3a2V5IiwiaWQiOjF9 }}
+        path: ./test-results/report.xml
      
           
