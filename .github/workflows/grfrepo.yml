@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish Test Reports
-        uses: brianchristensen/grafana-dashboard-upload-action@v1
+        uses: naveen1902/unit-test-upload-action@v1
         with:
-          dashboard_url: ${{ secrets.DASHBOARD_URL }}
+          dashboard_url: ${{ http://100.20.0.129:3000 }}
           api_key: ${{ secrets.API_KEY }}
-          file_path: './test-reports/results.json'
+          file_path: 'unit-tests/build/report.xml'
