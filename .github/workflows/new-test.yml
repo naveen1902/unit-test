@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Clone a tata-project repo
+        uses: actions/checkout@v3
+        with:
+          repository: naveen1902/unit-test
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          #token: ${{ secrets.BG_POLARIS }}
+          path: unit-test
+
 
       - name: Send to Grafana
         run: |
