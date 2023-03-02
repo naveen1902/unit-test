@@ -71,5 +71,14 @@ jobs:
         with:
            name: test-report
            path: 'unit-tests/build/report.xml'
-     
+      - name: Send report to Grafana
+        run: |
+          curl \
+            -X POST \
+            -H "Content-Type: application/xml" \
+            -H "Authorization: Bearer  eyJrIjoiWnN4aFpkejNuSDIzRFNiR3Q1Z2NnMEtGbUtiRVVCaUgiLCJuIjoiZ2l0YWN0aW9ucyIsImlkIjoxfQ==" \
+            --data-binary "unit-tests/build/report.xml" \
+            --http://100.20.0.129:3000/api/dashboards/home
+      
+
           
