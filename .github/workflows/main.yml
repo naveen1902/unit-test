@@ -2,9 +2,9 @@ name: CMake
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -71,13 +71,5 @@ jobs:
         with:
            name: test-report
            path: 'unit-tests/build/report.xml'
-      - name: Publish UT report to MySQL
-        env: 
-          DB_HOST: ${{ secrets.localhost }}
-          DB_PORT: ${{ secrets.3306 }}
-          DB_NAME: ${{ secrets.Polaris }}
-          DB_USER: ${{ secrets.admin }}
-          DB_PASSWORD: ${{ secrets.Polaris22@ }}
-          UT_REPORT_PATH: 'unit-tests/build/report.xml'
-          run: publish_report.xml
-        
+     
+          
