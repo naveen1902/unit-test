@@ -32,12 +32,14 @@ jobs:
             -d "@unit-tests/build/report.xml"\
              http://100.20.0.129:3000/d/7doGbax4z/gitactions?orgId=1
               data-sources: >
-                                [{
-                                   "name": "my-datasource",
-                                    "type": "grafana",
-                                    "url": "http://100.20.0.129:3000",
-                                    "access": "proxy",
-                                    "jsonData": {
-                                   "timeField": "report.xml" 
-                                   }
-                               }]
+                            [{
+                              "name": "my-datasource",
+                              "type": "grafana",
+                              "url": "http://100.20.0.129:3000",
+                              "access": "proxy",
+                              "jsonData": {
+                             "timeField": "report.xml"       
+                                 }
+                            }]
+
+                                 
