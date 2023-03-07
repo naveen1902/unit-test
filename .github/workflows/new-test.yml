@@ -33,3 +33,13 @@ jobs:
             -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
             -d "@unit-tests/build/report.xml"\
              http://100.20.0.129:3000/dashboards/f/t4mLWRa4k/reports?query=
+             data-sources: >
+                          [{
+                             "name": "my-datasource",
+                              "type": "grafana",
+                              "url": "http://100.20.0.129:3000",
+                              "access": "proxy",
+                              "XmlData": {
+                             "timeField": "1 hour" 
+                             }
+                         }]
