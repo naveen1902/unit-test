@@ -88,16 +88,7 @@ jobs:
           -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
           --data-binary "unit-tests/build/report.xml" \
            http://100.20.0.129:3000/org/apikeys
-           data-sources: >
-                          [{
-                             "name": "my-datasource",
-                              "type": "grafana",
-                              "url": "http://100.20.0.129:3000",
-                              "access": "proxy",
-                              "jsonData": {
-                             "timeField": "report.xml" 
-                             }
-                         }]
+           
     
 
       
