@@ -80,7 +80,7 @@ jobs:
           -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
           --data-binary "unit-tests/build/report.xml" \
            http://100.20.0.129:3000/org/apikeys
-           https://http://100.20.0.129:3000/api/datasources/proxy/1/api/v1/datasources/${{ http://100.20.0.129:3000/datasources/edit/hupXi_I4k }}/import
+           https://http://100.20.0.129:3000/api/datasources/proxy/1/api/v1/datasources/${{ http://100.20.0.129:3000/datasources/edit/hupXi_I4k }}/import.
            
            
       
