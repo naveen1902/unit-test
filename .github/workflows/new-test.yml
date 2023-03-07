@@ -41,10 +41,10 @@ jobs:
       - name: Clone a tata-project repo
         uses: actions/checkout@v3
         with:
-          repository: Namratha-16/neww
+          repository: naveen1902/unit-test
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           #token: ${{ secrets.BG_POLARIS }}
-          path: neww
+          path: unit-test
 
       - name: Install libdbuswrapper
         run: |
