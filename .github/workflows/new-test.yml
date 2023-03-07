@@ -22,13 +22,7 @@ jobs:
       - name: Install curl
         run: sudo apt-get update && sudo apt-get install -y curl
         
-      - name: Publish dashboard to Grafana
-        uses: codecentric/grafana-dashboard-publish-action@v1.0.1
-        with:
-          grafana-url: ${{ http://100.20.0.129:3000 }}
-          grafana-api-key: ${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}
-          dashboard-json-file-path: http://100.20.0.129:3000/dashboards/f/t4mLWRa4k/reports
-          overwrite: true
+    
 
 
 
