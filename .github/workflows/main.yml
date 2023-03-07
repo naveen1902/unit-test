@@ -83,7 +83,7 @@ jobs:
             -H "Content-Type: application/xml" \
             -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
             -d "@unit-tests/build/report.xml"\
-             http://100.20.0.129:3000/d/7doGbax4z/gitactions?orgId=1
+             http://100.20.0.129:3000/d/7doGbax4z/gitactions
     
 
       
