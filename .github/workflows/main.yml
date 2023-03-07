@@ -72,14 +72,6 @@ jobs:
            name: test-report
            path: 'unit-tests/build/report.xml'
            
-      - name: Install curl
-        run: sudo apt-get update && sudo apt-get install -y curl
-
-
-
-      - name: Install Grafana reporting tool
-        run: npm install -g @grafana/xml-report-tool
-
       - name: Send report to Grafana
         run: |
           curl \
@@ -89,8 +81,6 @@ jobs:
           --data-binary "unit-tests/build/report.xml" \
            http://100.20.0.129:3000/org/apikeys
            
-    
-
       
 
           
