@@ -77,13 +77,11 @@ jobs:
 
 
 
-      - name: Send to Grafana
-        run: |
-          curl -X POST \
-            -H "Content-Type: application/xml" \
-            -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
-            -d "@unit-tests/build/report.xml"\
-             http://http://100.20.0.129:3000/dashboards/f/t4mLWRa4k/reports?query=
+      - name: Install Grafana reporting tool
+        run: npm install -g @grafana/xml-report-tool
+
+      - name: Send XML reports to Grafana
+        run: xml-report-tool send -u ${{ secrets.admin }} -p ${{ scerets.Polaris2022@ }} -r ${{ secrets.https://github.com/naveen1902/ }} -f /path/to/reports/*report.xml
     
 
       
