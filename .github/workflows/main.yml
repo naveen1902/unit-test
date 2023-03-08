@@ -81,7 +81,7 @@ jobs:
           folder_id: ${{ GRAFANA_FOLDER_ID }}
           report_type: 'xml'
           report_name: 'UT Report'
-          report_data: '${{ unit-tests/build/report.xml }}'
+          report_data:  unit-tests/build/report.xml 
            
            
            
