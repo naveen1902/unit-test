@@ -72,14 +72,14 @@ jobs:
            name: test-report
            path: 'unit-tests/build/report.xml'
            
-      - name: Send report to Grafana
-        run: |
-          curl \
-          -X POST \
-          -H "Content-Type: application/xml" \
-          -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
-          --data-binary "unit-tests/build/report.xml" \
-           http://100.20.0.129:3000/org/apikeys
+      - name: Publish to Grafana
+        uses: michaeldmoore/grafana-reporter-action@v1.3
+        with:
+          grafana_url: ${{ http://100.20.0.129:3000 }}
+          api_token: ${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}
+          dashboard_id: ${{ secrets.GRAFANA_DASHBOARD_ID }}
+          folder_id: ${{ secrets.GRAFANA_FOLDER_ID }}
+          report_file_path: ./test/report.json
            
            
            
