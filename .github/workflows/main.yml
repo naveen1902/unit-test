@@ -77,9 +77,9 @@ jobs:
         with:
           grafana_url: ${{ http://100.20.0.129:3000 }}
           api_token: ${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}
-          dashboard_id: ${{ secrets.GRAFANA_DASHBOARD_ID }}
-          folder_id: ${{ secrets.GRAFANA_FOLDER_ID }}
-          report_file_path: ./test/report.json
+          dashboard_id: ${{ GRAFANA_DASHBOARD_ID }}
+          folder_id: ${{ GRAFANA_FOLDER_ID }}
+          report_file_path: ./test/report.xml
            
            
            
