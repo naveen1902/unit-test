@@ -79,7 +79,9 @@ jobs:
           api_token: ${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}
           dashboard_id: ${{ GRAFANA_DASHBOARD_ID }}
           folder_id: ${{ GRAFANA_FOLDER_ID }}
-          report_file_path: 'unit-tests/build/report.xml'
+          report_type: 'xml'
+          report_name: 'UT Report'
+          report_data: '${{ unit-tests/build/report.xml }}'
            
            
            
