@@ -72,6 +72,11 @@ jobs:
            name: test-report
            path: 'unit-tests/build/report.xml'
            
+      - name: Install Grafana plugin
+        run: |
+          curl https://grafana.com/api/plugins/simple-json-datasource/versions/latest/download -o /tmp/simple-json-datasource.zip
+          unzip -d /var/lib/grafana/plugins /tmp/simple-json-datasource.zip
+           
       - name: Send report to Grafana
         run: |
           curl \
