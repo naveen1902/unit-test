@@ -72,17 +72,14 @@ jobs:
            name: test-report
            path: 'unit-tests/build/report.xml'
            
-      - name: Set up environment variables
+      - name: Send report to Grafana
         run: |
-         echo "GRAFANA_API_KEY=${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}" >> .env
-         echo "DASHBOARD_ID=${{  }}" >> .env
-         echo "GRAFANA_URL=${{ http://100.20.0.129:3000 }}" >> .env
-
-      - name: Generate and publish Ut reports
-        run: |
-         npm run generate_reports
-         npm run publish_reports
-           
+          curl \
+          -X POST \
+          -H "Content-Type: application/xml" \
+          -H "Authorization: Bearer eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9" \
+          --data-binary "unit-tests/build/report.xml" \
+           http://100.20.0.129:3000/org/apikeys
            
       
 
