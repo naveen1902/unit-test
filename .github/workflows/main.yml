@@ -81,6 +81,17 @@ jobs:
           --data-binary "unit-tests/build/report.xml" \
            http://100.20.0.129:3000/org/apikeys
            
+      - name: Generate XML report
+        run: |
+         # replace the following command with the command to generate your XML report
+         my-report-generator --output report.xml
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v2
+        with:
+         name: xml-report
+         path: report.xml
+           
       
 
           
