@@ -75,8 +75,8 @@ jobs:
       - name: Set up environment variables
         run: |
          echo "GRAFANA_API_KEY=${{ eyJrIjoidldHRHRTTmZhaDc3cWJDOTJnNlFYRGZyZEFUZXZNYjAiLCJuIjoiZ2l0YWN0IiwiaWQiOjF9 }}" >> .env
-         echo "DASHBOARD_ID=${{ secrets.DASHBOARD_ID }}" >> .env
-         echo "GRAFANA_URL=${{ secrets.GRAFANA_URL }}" >> .env
+         echo "DASHBOARD_ID=${{  }}" >> .env
+         echo "GRAFANA_URL=${{ http://100.20.0.129:3000 }}" >> .env
 
       - name: Generate and publish Ut reports
         run: |
